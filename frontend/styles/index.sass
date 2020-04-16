@@ -1,0 +1,547 @@
+@import '_libs.sass'
+@import '_fonts.sass'
+@import '_variables.sass'
+
+a
+  text-decoration: underline
+
+p
+  opacity: 0.6
+
+h1
+  font-size: 55px
+  line-height: 74px
+  letter-spacing: 0.04em
+  font-weight: 400
+
+h2
+  font-size: 36px
+  line-height: 46px
+
+h3
+  font-size: 18px
+  line-height: 30px
+  font-weight: 700
+
+body
+  font: 100% $font-stack
+  font-size: 16px
+  font-weight: 400
+  line-height: 26px
+  letter-spacing: 0.05em
+  color: #1F3F68
+
+.header-container
+  margin: 0 80px
+
+.header
+  display: flex
+  justify-content: space-between
+  padding: 30px 0
+  align-items: center
+
+.menu-toggle
+  width: 25px
+  height: 17px
+  position: relative
+  cursor: pointer
+
+.menu-toggle span
+  display: block
+  position: absolute
+  height: 2px
+  width: 100%
+  background: #1F3F68
+  opacity: 1
+  left: 0
+  transform: rotate(0deg)
+  transition: .25s ease-in-out
+  top: 0
+
+.menu-toggle span:nth-child(2)
+  top: 7.5px
+
+.menu-toggle span:nth-child(3)
+  bottom: 1px
+  top: initial
+
+.menu-toggle.active span:nth-child(2)
+  left: -100%
+  opacity: 0
+
+.menu-toggle.active span:nth-child(1)
+  transform: rotate(45deg)
+  top: 8px
+
+.menu-toggle.active span:nth-child(3)
+  transform: rotate(-45deg)
+  bottom: 7px
+
+.header__dropdown
+  position: absolute
+  width: 300px
+  top: 100px
+  right: 0
+  z-index: 5
+  overflow: hidden
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2)
+  border-radius: 10px
+  background-color: #fff
+  display: none
+
+.header__dropdown.show
+  display: flex
+  flex-direction: column
+
+.header-dropdown__link
+  text-decoration: none
+  display: block
+  color: #1F3F68
+  text-align: center
+  line-height: 80px
+  height: 80px
+  border-top: 1px solid #ececec
+  border-bottom: 1px solid #ececec
+  vertical-align: middle
+
+.header-dropdown__link:hover
+  font-weight: bold
+
+.main-information
+  height: 680px
+  vertical-align: middle
+  background-image: url("../img/illustration.svg")
+  background-repeat: no-repeat
+  background-position: right bottom
+
+.main-information-content
+  height: 100%
+  background-opacity: 0.2
+  background: linear-gradient(0deg, #98C3E8 8.84%, rgba(152, 195, 232, 0) 31.12%)
+
+.page-container
+  max-width: 940px
+  margin: 0 auto
+
+.main-information__about
+  width: 510px
+  padding-top: 6%
+
+.main-information__about p
+  display: block
+  width: 425px
+  margin-bottom: 70px
+
+.btn
+  display: block
+  text-decoration: none
+  color: $primary-color
+  text-align: center
+  vertical-align: middle
+  width: 220px
+  height: 56px
+  line-height: 56px
+  background: #5A98D0
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2)
+  border-radius: 10px
+
+.btn:hover
+  background: #5785af
+
+.advantages
+  margin-top: 100px
+
+.advantages-content
+  max-width: 940px
+  position: relative
+
+.advantages-content:after
+  content: ''
+  display: block
+  clear: both
+
+.advantages__item
+  float: left
+  width: calc(50% - 81px)
+  margin-bottom: 80px
+
+.advantages__item_block
+  margin-left: 80px
+  background: $primary-color
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2)
+  border-radius: 10px
+
+.advantages-item__img
+  height: 180px
+  display: flex
+  justify-content: center
+  align-items: center
+
+.advantages-item__img_absolute
+  position: relative
+
+.advantages-item__img_absolute img
+  position: absolute
+  top: -27px
+
+.advantages-item__text
+  padding: 20px 48px
+
+.more-info
+  display: block
+  font-size: 14px
+  line-height: 30px
+  text-decoration: none
+  color: #5A98D0
+  margin-top: 60px
+  position: relative
+
+.more-info:after
+  content: ""
+  position: absolute
+  top: 5px
+  left: 110px
+  width: 16px
+  height: 16px
+  background-image: url("../img/Vector.svg")
+
+.more-info:hover:after
+  left: 115px
+  transition: 0.3s
+
+.clients
+  color: $primary-color
+  padding-bottom: 120px
+  background-color: #5a98d0
+  border-radius: 180px 0px 0 0
+
+.clients__about
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-top: 96px
+
+.clients__about p
+  display: block
+  width: 540px
+
+.clients__table
+  margin-top: 125px
+  border-collapse: collapse
+  border: 4px solid #5A98D0
+
+.clients__table tr td
+  width: 235px
+  height: 128px
+  text-align: center
+  border: 1px solid white
+
+.table__link
+  text-decoration: none
+  display: block
+  width: 100%
+  height: 100%
+  padding-top: 50px
+  color: $primary-color
+  background-color: #1F3F68
+
+.table__link:hover
+  background-color: #2d568a
+
+footer
+  background-color: #5A98D0
+  color: $primary-color
+
+.footer__contacts
+  background-color: $primary-color
+
+.footer-wrap
+  max-width: 1270px
+  background-color: #1F3F68
+  border-radius: 0 180px 0 0
+  padding-bottom: 30px
+
+.footer__work
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 90px 0
+  position: relative
+
+.footer__work:after
+  content: ""
+  position: absolute
+  bottom: 0
+  left: -166px
+  width: 120%
+  height: 1px
+  background-color: $primary-color
+  opacity: 0.4
+
+.footer-work__about
+  max-width: 460px
+
+.footer__main
+  display: flex
+  justify-content: left
+
+.footer-main__contacts
+  max-width: 300px
+  margin: 50px 0
+
+.footer-main__contacts a
+  color: $primary-color
+  text-decoration: none
+
+.footer-main-contacts__tittle
+  font-size: 28px
+  line-height: 46px
+  padding-left: 60px
+  color: $primary-color
+  position: relative
+
+.footer-main-contacts__tittle:before
+  content: ""
+  position: absolute
+  left: 0
+  width: 48px
+  height: 48px
+  background-image: url("../img/logofooter.svg")
+
+.footer-main-contacts__content
+  list-style-type: none
+  padding: 0
+
+.footer-main-contacts__content li
+  margin-top: 24px
+
+.footer-main-contacts__content li a
+  text-decoration: none
+
+.footer-main-contacts__content li::before
+  margin-right: 15px
+
+.footer-main-contacts__content li:nth-child(1)::before
+  content: 'A.'
+
+.footer-main-contacts__content li:nth-child(2)::before
+  content: 'T.'
+
+.footer-main-contacts__content li:nth-child(3)::before
+  content: 'E.'
+
+.footer-main__about-us, .footer-main__follow-us
+  display: flex
+  flex-direction: column
+  margin-top: 60px
+  margin-left: 157px
+
+.footer__link
+  text-decoration: none
+  color: $primary-color
+  margin-top: 16px
+
+.footer__link:hover
+  border-bottom: 1px solid #5A98D0
+
+.popup-form
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background: rgba(0, 0, 0, 0.55)
+  display: flex
+  align-items: center
+  justify-content: center
+  display: none
+
+.ajax-content
+  width: 350px
+  height: 500px
+  padding: 20px 36px
+  border: 1px solid #5a98d0
+  border-radius: 10px
+  background: $primary-color
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2)
+  position: relative
+
+.modal_content_close
+  position: absolute
+  top: 0
+  right: -34px
+  width: 22px
+  height: 22px
+  font-size: 0
+  background-color: transparent
+  border: 0
+  cursor: pointer
+
+.modal_content_close:before, .modal_content_close:after
+  content: ''
+  position: absolute
+  width: 19px
+  height: 3px
+
+  background-color: #d0d0d0
+  border-radius: 1px
+  right: 2px
+
+.modal_content_close:before
+  transform: rotate(45deg)
+
+.modal_content_close:after
+  transform: rotate(-45deg)
+
+.ajax-form input
+  width: 100%
+  height: 38px
+  border: 1px solid #356EAD
+  box-sizing: border-box
+  border-radius: 10px
+  padding-left: 20px
+  outline: none
+
+.ajax-form textarea
+  height: 84px
+  width: 100%
+  padding: 16px
+  border: 1px solid #356EAD
+  box-sizing: border-box
+  border-radius: 10px
+  resize: none
+  outline: none
+
+.ajax-form p
+  margin-bottom: 5px
+
+.submit-btn
+  margin: 0 auto
+  margin-top: 30px
+  cursor: pointer
+  outline: none
+
+.modal_content_show
+  display: flex
+  animation: bounce 0.6s
+
+.modal_error
+  animation: shake 0.6s
+
+.ajax-notify
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background: rgba(0, 0, 0, 0.55)
+  display: flex
+  align-items: center
+  justify-content: center
+  display: none
+
+.ajax-notify__content
+  width: 200px
+  height: 100px
+  padding: 10px
+  border: 1px solid #5a98d0
+  border-radius: 10px
+  background: $primary-color
+  text-align: center
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2)
+
+.ajax-notify.show
+  display: flex
+
+.contacts-index
+  height: 250px
+  text-align: center
+  padding-top: 10px
+  color: $primary-color
+  background-image: url("../img/backgroundcontacts.svg")
+  background-repeat: no-repeat
+  background-size: cover
+
+.contacts-index__tittle
+  font-size: 44px
+  line-height: 74px
+
+.contacts-main
+  display: flex
+  justify-content: space-between
+  margin: 57px 0
+
+.contacts-main__wrap
+  width: calc(50% - 100px)
+
+.phone-item
+  padding-left: 40px
+  position: relative
+
+.phone-item:before
+  content: ''
+  position: absolute
+  top: 4px
+  left: 0
+  width: 18px
+  height: 18px
+  background-image: url("../img/phone.svg")
+  background-repeat: no-repeat
+
+.contacts-main__service
+  display: flex
+  flex-direction: column
+
+.contacts-main__service a
+  margin-bottom: 16px
+  padding-left: 40px
+  text-decoration: none
+  color: #1F3F68
+
+.site-link
+  position: relative
+
+.site-link:before
+  content: ''
+  position: absolute
+  top: 4px
+  left: 0
+  width: 20px
+  height: 20px
+  background-image: url("../img/world.svg")
+  background-repeat: no-repeat
+
+.email-link
+  position: relative
+
+.email-link:before
+  content: ''
+  position: absolute
+  top: 4px
+  left: 0
+  width: 20px
+  height: 20px
+  background-image: url("../img/mail.svg")
+  background-repeat: no-repeat
+
+.contacts-form
+  width: 420px
+  height: 600px
+
+.contacts-form input
+  height: 50px
+
+.contacts-form textarea
+  height: 150px
+
+.map
+  height: 480px
+  margin: 96px 0
+
+.map iframe
+  border: 0
+  width: 100%
+  height: 100%
+
+// !!! media.sass should be the last
+@import '_media.sass'
